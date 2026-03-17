@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "房地產終極下載器",
+  "version": "1.0",
+  "permissions": ["webRequest"],
+  "host_permissions": ["*://*.hlhouseerp.com.tw/*", "*://hlhouseerp.com.tw/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.hlhouseerp.com.tw/*", "*://hlhouseerp.com.tw/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
